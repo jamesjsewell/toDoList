@@ -3,6 +3,7 @@ import React from 'react'
 import STORE from '../store.js'
 import ACTIONS from '../actions.js'
 import moment from 'moment'
+import LoadingComponent from './loadingAnim.js'
 
 
 console.log(STORE.data.someData)
@@ -56,7 +57,7 @@ var TasksPage = React.createClass({
 		return(
 
 			<div className = "tasksPage">
-
+			
 				<form onSubmit={this._handleSubmit} className='taskForm' >
 		 			<input name="taskName" type="text" placeholder="name of task" />
 		 			<textarea rows="5" cols="20" name="taskDescription" placeholder="enter a description for your task"></textarea>

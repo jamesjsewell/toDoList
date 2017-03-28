@@ -67,12 +67,20 @@ const ACTIONS = {
 		// backbone && jquery, on our behalf, will add a "GET" 
 		// verb to the header of our request when we use 
 		// .fetch()
+		ACTIONS.loadingVis('visible')
 		taskColl.fetch()
 			.then(function() {
 				STORE.set({
 					taskCollection: taskColl
 				})
+				ACTIONS.loadingVis('hidden')
 			})
+	},
+
+	loadingVis: function(visible){
+
+		var loading = document.querySelector('.loading')
+		loading.style.visibility = visible
 	}
 }
 

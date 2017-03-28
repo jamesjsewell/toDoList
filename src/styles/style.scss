@@ -140,6 +140,7 @@ input[type=text] {
 }
 
 button{
+
 	background: none;
 	border: $btn-outline-size solid white;
 	border-radius: 12px;
@@ -150,20 +151,39 @@ button{
 }
 
 button:hover {
+
 	background: none;
 	border: $btn-outline-size dashed $color-lime;
 	border-radius: 12px;
 	font-size: 12px;
 	color: $color-lime;
 	margin: .2em;
+
 }
 
 button:focus {
+
 	outline: none;
+
 }
 
 .submitBttn{
+
 	vertical-align: center;
 	text-align: center;
+
+}
+.loading{
+	max-width: 100%;
+	width: 64px;
+	height: 64px;
+	transition: linear 1s all;
+	position: fixed;
+	line-height: 100vh;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	visibility: visible;
 
 }
